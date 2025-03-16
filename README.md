@@ -38,7 +38,7 @@ Ensure you have **Python 3.8+** installed.
 ### 📦 Set Up a Virtual Environment (Recommended)
 
 - python -m venv venv
-- source venv/bin/activate       ( Windows: env\Scripts\activate )
+- source venv/bin/activate       ( Windows: venv\Scripts\activate )
 
 ### 📌 Install Dependencies
 
