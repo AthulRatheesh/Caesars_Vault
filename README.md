@@ -55,23 +55,25 @@ python Locker.py
 
 ## 🔐 Authentication Workflow
 
-    Login using your email & password.
-    OTP Verification – An OTP is sent to your registered email.
-    Access File Encryption & Folder Locking.
+- Login using your email & password.
+- OTP Verification – An OTP is sent to your registered email.
+- Access File Encryption & Folder Locking.
 
 ## 🛡️ File Encryption & Decryption
 
-    Encrypt a File:
-        Select a file → Enter a password → Encrypt.
-        Generates .enc file (AES-256 encrypted).
+✔ Encrypt a File:
+    - Select a file → Enter a password → Encrypt.
+    - Generates .enc file (AES-256 encrypted).
 
-    Decrypt a File:
-        Select an encrypted file → Enter the same password → Decrypt.
+✔ Decrypt a File:
+    - Select an encrypted file → Enter the same password → Decrypt.
 
 ## 🔏 Folder Locking & Unlocking
 
-    Lock a Folder: Select a directory, set a password, and secure its contents.
-    Unlock a Folder: Provide the correct password to restore access.
+✔ Lock a Folder: 
+    - Select a directory, set a password, and secure its contents.
+✔ Unlock a Folder: 
+    - Provide the correct password to restore access.
 
 ## 🛡️ Security Measures
 
