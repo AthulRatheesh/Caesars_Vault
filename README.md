@@ -110,7 +110,7 @@ This system uses Time-Based One-Time Passwords (TOTP) for Multi-Factor Authentic
 
 ### 📌 Step 2: Generating OTP for Login
 
-🔹 When a user attempts to log in, the system retrieves the stored mfa_secret.
+- When a user attempts to log in, the system retrieves the stored mfa_secret.
 - A 6-digit OTP is generated and sent via email.
 - The OTP is valid for 120 seconds.
 
@@ -124,8 +124,11 @@ This system uses Time-Based One-Time Passwords (TOTP) for Multi-Factor Authentic
 ## 🛡️ Security Measures
 
 ✔ Passwords are securely hashed using SHA-256.
+
 ✔ OTP authentication via email ensures 2FA security.
+
 ✔ AES-256 encryption provides industry-standard protection.
+
 ✔ Unauthorized access detection via logs and user tracking.
 
 ---
