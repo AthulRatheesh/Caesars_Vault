@@ -37,7 +37,7 @@ Ensure you have **Python 3.8+** installed.
 ## 📦 Set Up a Virtual Environment (Recommended)
 
 python -m venv env
-source env/bin/activate  # Windows: env\Scripts\activate
+source env/bin/activate      # Windows: env\Scripts\activate
 
 ## 📌 Install Dependencies
 
@@ -62,22 +62,30 @@ python Locker.py
 ## 🛡️ File Encryption & Decryption
 
 ✔ Encrypt a File:
+
     - Select a file → Enter a password → Encrypt.
     - Generates .enc file (AES-256 encrypted).
 
 ✔ Decrypt a File:
+
     - Select an encrypted file → Enter the same password → Decrypt.
 
 ## 🔏 Folder Locking & Unlocking
 
 ✔ Lock a Folder: 
+
     - Select a directory, set a password, and secure its contents.
+    
 ✔ Unlock a Folder: 
+
     - Provide the correct password to restore access.
 
 ## 🛡️ Security Measures
 
 ✔ Passwords are securely hashed using SHA-256.
+
 ✔ OTP authentication via email ensures 2FA security.
+
 ✔ AES-256 encryption provides industry-standard protection.
+
 ✔ Unauthorized access detection via logs and user tracking.
