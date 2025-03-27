@@ -14,6 +14,9 @@ from Crypto.Random import get_random_bytes
 import base64
 import hashlib
 
+# Import the file shredder functionality
+from file_shredder import FileShredder, ShredderTab
+
 
 class FileEncryptor(QMainWindow):
     def __init__(self):
@@ -49,7 +52,7 @@ class FileEncryptor(QMainWindow):
             json.dump(self.locked_folders, f)
 
     def init_ui(self):
-        self.setWindowTitle('AES File Encryptor & Folder Locker')
+        self.setWindowTitle('AES File Encryptor, Folder Locker & File Shredder')
         self.setGeometry(300, 300, 700, 550)
         self.setAcceptDrops(True)
 
@@ -139,6 +142,22 @@ class FileEncryptor(QMainWindow):
                 border: 2px solid #45475a;
                 border-radius: 8px;
             }
+            QComboBox {
+                background-color: #313244;
+                border: 1px solid #45475a;
+                border-radius: 6px;
+                padding: 8px;
+                color: #cdd6f4;
+                font-size: 13px;
+            }
+            QComboBox::drop-down {
+                subcontrol-origin: padding;
+                subcontrol-position: top right;
+                width: 30px;
+                border-left-width: 1px;
+                border-left-color: #45475a;
+                border-left-style: solid;
+            }
         ''')
 
         main_widget = QWidget()
@@ -149,7 +168,7 @@ class FileEncryptor(QMainWindow):
         main_layout.setSpacing(20)
 
         # Title
-        title_label = QLabel('AES FILE ENCRYPTOR & FOLDER LOCKER')
+        title_label = QLabel('AES FILE ENCRYPTOR, FOLDER LOCKER & FILE SHREDDER')
         title_label.setAlignment(Qt.AlignCenter)
         title_label.setStyleSheet('font-size: 22px; font-weight: bold; color: #89b4fa; margin-bottom: 10px;')
         main_layout.addWidget(title_label)
@@ -327,9 +346,13 @@ class FileEncryptor(QMainWindow):
         self.folder_progress.setMinimumHeight(15)
         folder_layout.addWidget(self.folder_progress)
 
+        # Create the file shredder tab
+        shredder_tab = ShredderTab()
+
         # Add tabs to the tab widget
         tab_widget.addTab(file_widget, "File Encryption")
         tab_widget.addTab(folder_widget, "Folder Locker")
+        tab_widget.addTab(shredder_tab, "File Shredder")
 
         main_layout.addWidget(tab_widget)
         main_widget.setLayout(main_layout)
