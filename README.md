@@ -1,4 +1,4 @@
-# Secure File Encryption Tool
+# Caesar's Vault - Secure File Encryption Tool
 
 ## 🔒 About
 This is a **secure file encryption tool** with essential cybersecurity features, designed as an offline, standalone application. It helps users **lock files and folders, securely delete files, and protect sensitive data** with ease.
